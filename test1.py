@@ -1,23 +1,69 @@
 import requests
 from bs4 import BeautifulSoup
+import csv
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'
+}
+url = 'https://edfjzxt.xmu.edu.cn/alumni/donate/xmuDonatePublic/listForWeb'
 
-def crawl_page(url):
-    # Send a request to the URL
-    response = requests.get(url)
+response = requests.get(url='https://edfjzxt.xmu.edu.cn/website/page/Information/xxgk.html', headers=headers).content
+soup = BeautifulSoup(response, 'html.parser')
+table = soup.find('table')
+thead = table.find('thead')
+# 获取表头
+header = []
+for th in thead.find_all('th'):
+    header.append(th.text.strip())
 
-    # Check if the request was successful
-    if response.status_code == 200:
-        # Parse the HTML content using Beautiful Soup
-        soup = BeautifulSoup(response.text, 'html.parser')
+csvfile = open('donation_records.csv', 'w', newline='')
+writer = csv.writer(csvfile)
+writer.writerow(header)
 
-        # Process the parsed HTML and extract the desired information
-        # (This will depend on the structure of the webpage you're crawling)
-        
-        # Example: print all the text inside paragraph tags
-        with open('output.txt', 'wb') as f:
-            f.write(soup.find(class_ = 'content2').encode('utf-8'))
-    else:
-        print(f"Failed to fetch the page: {url}")
+for i in range(1, 10):
+    response = requests.get(url='https://edfjzxt.xmu.edu.cn/alumni/donate/xmuDonatePublic/listForWeb?pageNo='+ str(i) +'&pageSize=10', headers=headers).json()
 
-# Example usage: crawl a specific URL
-crawl_page('https://edfjzxt.xmu.edu.cn/website/page/Information/xxgk.html')
+    records = response['result']['records']
+
+    # 获取表格内容
+    rows = []
+    for data in records:
+        row = []
+        row.append(data['donateTime'])  # 捐赠时间
+        row.append(data['donor'])       # 捐赠人 
+        row.append(data['major'])       # 院系专业
+        row.append(data['alumniAssoc']) # 校友会
+        row.append(data['projName'])    # 捐赠项目
+        row.append(data['donateAmt'])   # 捐赠金额
+        rows.append(row)
+    writer.writerows(rows)
+
+# 存储表格数据
+# with open('donation_records.csv', 'w', newline='') as csvfile:
+#     writer = csv.writer(csvfile)
+#     writer.writerow(header)
+#     writer.writerows(rows)
+
+
+# print(soup.tr)
+# print(soup.find('tr', class_ = 'active'))
+# print(soup.select('table'))
+# print(soup.find('tr', class_ = 'listInfo'))
+
+
+# tbody = table.find('thead', id="listInfo")
+# # tbody = table.find('tbody')
+
+
+
+# # 获取表格内容
+# rows = []
+# for tr in tbody.find_all('tr'):
+#     row = []
+#     for td in tr.find_all('td'):
+#         row.append(td.text.strip())
+#     rows.append(row)
+
+
+
+# with open('output.txt', 'w', encoding='utf-8') as f:
+#             f.write(str(response))
