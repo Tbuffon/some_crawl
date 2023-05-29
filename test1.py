@@ -10,13 +10,12 @@ def crawl_page(url):
         # Parse the HTML content using Beautiful Soup
         soup = BeautifulSoup(response.text, 'html.parser')
 
-
         # Process the parsed HTML and extract the desired information
         # (This will depend on the structure of the webpage you're crawling)
         
         # Example: print all the text inside paragraph tags
-        for p in soup.find_all('p'):
-            print(p.get_text())
+        with open('output.txt', 'wb') as f:
+            f.write(soup.find(class_ = 'content2').encode('utf-8'))
     else:
         print(f"Failed to fetch the page: {url}")
 

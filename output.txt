@@ -1,0 +1,65 @@
+<div class="content2">
+<div class="container" style="width: 100%;">
+<div class="row" style="padding: 10px 0">
+<div class="col-lg-3 col-md-3">
+<label>é¡¹ç®åç§°</label>
+<select class="form-control" id="selectProj">
+<option></option>
+</select>
+</div>
+<div class="col-lg-3 col-md-3">
+<label>æèµ äºº</label>
+<input class="form-control" id="input_donor" placeholder="è¯·è¾å¥æèµ äººå§å" type="text"/>
+</div>
+<div class="col-lg-3 col-md-3" style="line-height: 80px;">
+<button class="btn btn-primary" id="search" style="background-color: #003c88" type="button">æç´¢</button>
+</div>
+</div>
+<div class="table-responsive">
+<table class="table" id="table" style="text-align:center;">
+<thead>
+<tr class="active">
+<th style="width: 120px; text-align:center;">æèµ æ¶é´</th>
+<th style="width: 100px; text-align:center;">æèµ äºº</th>
+<th style="width: 100px; text-align:center;">é¢ç³»ä¸ä¸</th>
+<th style="width: 100px; text-align:center;">æ ¡åä¼</th>
+<th style="width: 100px; text-align:center;">æèµ é¡¹ç®</th>
+<th style="width: 100px; text-align:center;">æèµ éé¢</th>
+</tr>
+<!--                                    <tr class="active visible-md">-->
+<!--                                        <th style="width: 120px">æèµ æ¶é´</th>-->
+<!--                                        <th style="width: 100px">æèµ äºº</th>-->
+<!--                                        <th style="width: 100px">é¢ç³»ä¸ä¸</th>-->
+<!--                                        <th style="width: 100px">æ ¡åä¼</th>-->
+<!--                                        <th style="width: 100px">æèµ é¡¹ç®</th>-->
+<!--                                        <th style="width: 100px">æèµ éé¢</th>-->
+<!--                                    </tr>-->
+<!--                                    <tr class="active visible-sm">-->
+<!--                                        <th style="width: 120px">æèµ æ¶é´</th>-->
+<!--                                        <th style="width: 100px">æèµ äºº</th>-->
+<!--                                        <th style="width: 100px">é¢ç³»ä¸ä¸</th>-->
+<!--                                        <th style="width: 100px">æ ¡åä¼</th>-->
+<!--                                        <th style="width: 100px">æèµ é¡¹ç®</th>-->
+<!--                                        <th style="width: 100px">æèµ éé¢</th>-->
+<!--                                    </tr>-->
+<!--                                    <tr class="active visible-xs">-->
+<!--                                        <th style="width: 120px">æèµ æ¶é´</th>-->
+<!--                                        <th style="width: 100px">æèµ äºº</th>-->
+<!--                                        <th style="width: 100px">é¢ç³»ä¸ä¸</th>-->
+<!--                                        <th style="width: 100px">æ ¡åä¼</th>-->
+<!--                                        <th style="width: 100px">æèµ é¡¹ç®</th>-->
+<!--                                        <th style="width: 100px">æèµ éé¢</th>-->
+<!--                                    </tr>-->
+</thead>
+<thead id="listInfo">
+</thead>
+</table>
+</div>
+<div class="navbar navbar-default hidden-xs pageLimit">
+<ul class="pageLimit" id="pageLimit1"></ul>
+</div>
+<div class="navbar navbar-default visible-xs pageLimit">
+<ul class="pageLimit" id="pageLimit2"></ul>
+</div>
+</div>
+</div>
