@@ -1,0 +1,1259 @@
+<html><head>
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="EXPIRES" content="0">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EM100 Connect - CLSI M100 ED33:2023</title>
+<style>
+.cBorderTop1px{border-top-style:solid;border-top-width:1px;}
+.cBorderTop2px{border-top-style:solid;border-top-width:2px;}
+.cBorderBottom1px{border-bottom-style:solid;border-bottom-width:1px;}
+.cBorderBottom2px{border-bottom-style:solid;border-bottom-width:2px;}
+</style>
+<link rel="stylesheet" type="text/css" media="all and (min-width: 900px) and (max-width: 5060px)" href="csscs/GetCSS.aspx?id=ETCustomLarge">
+<link rel="stylesheet" type="text/css" media="all and (min-width: 100px) and (max-width: 899px)" href="csscs/GetCSS.aspx?id=ETCustomSmall">
+<link href="css/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-4GGLM3K433&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+var mdown=0;
+function setmdown(i)
+{
+mdown=i;
+}
+
+function loadAsync(src, callback, relative){
+    var baseUrl = "/";
+    var script = document.createElement('script');
+    if(relative === true){
+        script.src = baseUrl + src;  
+    }else{
+        script.src = src; 
+    }
+	script.type = "text/javascript";
+    if(callback !== null){
+        if (script.readyState) { // IE, incl. IE9
+            script.onreadystatechange = function() {
+                if (script.readyState == "loaded" || script.readyState == "complete") {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {
+        	script.addEventListener ("load", callback, false);        
+        	/*
+            script.onload = function() { // Other browsers
+                callback();
+            };*/
+        }
+    }
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+</script>
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="scripts/jquery.cookie.js"></script>
+<script src="scripts/cb/clipboard.min.js"></script>
+<link rel="stylesheet" href="css/ETDemo.css">
+<script type="text/javascript" src="scripts/ETDemo.js"></script>
+
+<link rel="stylesheet" href="css/colorbox.css">
+<script src="scripts/jquery.colorbox.js"></script>
+
+<script type="text/javascript" src="scripts/ETCore.js"></script>
+<script type="text/javascript" src="scripts/ETPageTP.js"></script>
+
+<link rel="stylesheet" type="text/css" href="csscs/GetCSS.aspx?id=ETCommon&amp;id2=[DT3]">
+<script type="text/javascript" src="csscs/GetJS.aspx?id=ETCommon&amp;id2=[DT3]"></script>
+</head><body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" oncontextmenu="return false" onhashchange="OnHashChange (event);" xonkeypress="return disableCtrlKeyCombination(event);" xonkeydown="return disableCtrlKeyCombination(event);"><xcript type="text/javascript" src="scripts/ETCommon.js"></xcript>
+
+<link rel="stylesheet" href="css/ETPageTimeout.css">
+<script type="text/javascript" src="scripts/ETPageTimeout.js"></script>
+
+<link rel="stylesheet" type="text/css" href="csscs/GetCSS.aspx?id=ETPageLayout&amp;id2=[DT3]">
+
+<script type="text/javascript" src="csscs/GetJS.aspx?id=ETPageLayout&amp;id2=[DT3]"></script>
+<xcript type="text/javascript" src="scripts/ETPageLayout.js"></xcript>
+<script type="text/javascript" src="scripts/ETPageLayoutPub.js"></script>
+
+<!--INSERTCHARTJS-->
+
+<script type="text/javascript">
+	
+	
+	function InitCommentsBox() {
+	}
+	$(document).ready(start);
+	function start() {
+		$(".group1").colorbox({rel:'group1'});		
+		$("#slider").slider({ animate: true,orientation: "horizontal",max: 13, min: -1, step: 1,value: 0, slide: function(event, ui) {$("#idFilterDateSliderValue").text($("#slider").slider( "option", "value" ));}  });
+		$( "#datepicker" ).datepicker({changeMonth: true, changeYear: true, showButtonPanel: true, closeText: "Close", showOn: "both", direction: "up", showWeek: true,showAnim: "fold", onSelect: function( dateText, inst ){$("#idFilterDateSliderValue").text(($("#datepicker").datepicker("getDate").getMonth()+1)+'/'+($("#datepicker").datepicker("getDate").getDate())+'/'+($("#datepicker").datepicker("getDate").getFullYear()) );}  });
+		CheckPlugins();
+		ETPageLayout_Init();	
+		InitCommentsBox();
+		ResetAvailableTime();
+		SearchBox_Init();
+		if (document.location.hash)
+		{
+			OnHashChange(null);
+		}
+		DisplayProgress(2);
+		setTimeout(function(){ loadjs(); }, 0);
+		InitDemoPart3();
+		DemoInit();		
+		HandleResize();
+	    $( "#idReportStartDate").datepicker();
+	    $( "#idReportEndDate").datepicker();
+	    //[ADDCOMMENTINGNOTIFY]
+	    //[ADDAUTOSAVE]
+	    //[ADDITONALSTARTUPJS]
+	}	
+	function loadjs() {
+		ETPageLayout_InitDocContent();
+		bInitDone = true;
+		HideProgress();
+	}		
+</script>
+
+<!-- ADDTEXTCTSJS -->
+<!-- ADDITIONALJS -->
+
+<!-- Load TinyMCE -->
+
+<!--
+	<script src="Scripts2/tinymce/js/tinymce/tinymce.min.js"></script>
+	<script src="Scripts2/tinymce/js/tinymce/plugins/table/plugin.min.js"></script>
+	<script src="Scripts2/tinymce/js/tinymce/plugins/paste/plugin.min.js"></script>
+	<script src="Scripts2/tinymce/js/tinymce/plugins/spellchecker/plugin.min.js"></script> 
+-->
+
+<script>
+
+	
+function initETPaste(editor) {
+  // create input and insert in the DOM
+
+  ////var inp = $('<input id="tinymce-uploader" type="file" name="pic" accept="image/*" style="display:none">');
+  ////$(editor.getElement()).parent().append(inp);
+
+  // add the image upload button to the editor toolbar
+  editor.addButton('ETPaste', {
+    text: '',
+    icon: 'paste',
+    tooltip: "Paste Collected Items",
+    onclick: function(e) { 
+
+var div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
+var sGD=ProcessLinkPeek10("BICSI TDMM ED13 2014 CHAPTER 16 SECTION INTRODUCTION PARA 2");
+div.innerHTML = sGD;
+//       editor.insertContent(sGD);
+
+div.setAttribute("id", "idETPasteBuffer");
+//div.setAttribute('contentEditable', true);
+document.body.appendChild(div);
+    
+if (document.selection) { 
+	alert("1");
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById("idETPasteBuffer"));
+    range.select().createTextRange();
+    document.execCommand("copy"); 
+
+} else if (window.getSelection) {
+	alert("2");
+    var range = document.createRange();
+     range.selectNodeContents(document.getElementById("idETPasteBuffer"));
+	 //alert(document.getElementById("idETPasteBuffer").innerHTML);
+     window.getSelection().addRange(range);
+     document.execCommand("copy");
+}    
+
+
+div.parentNode.removeChild(div);	      
+  	      
+	      
+    }
+  });
+}
+
+
+
+function initImageUpload(editor) {
+  // create input and insert in the DOM
+  var inp = $('<input id="tinymce-uploader" type="file" name="pic" accept="image/*,.eps" style="display:none">');
+  $(editor.getElement()).parent().append(inp);
+
+  // add the image upload button to the editor toolbar
+  editor.addButton('imageupload', {
+    text: '',
+    icon: 'image',
+    tooltip: "Insert Image",
+    onclick: function(e) { // when toolbar button is clicked, open file select modal
+      inp.trigger('click');
+    }
+  });
+
+  // when a file is selected, upload it to the server
+  inp.on("change", function(e){
+    uploadFile($(this), editor);
+  });
+}
+
+function uploadFile(inp, editor) {
+  var input = inp.get(0);
+  var data = new FormData();
+  data.append('image[file]', input.files[0]);
+  $.ajax({
+    url: 'ETImageUploaderEdit.aspx',
+    type: 'POST',
+    data: data,
+    processData: false, // Don't process the files
+    contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+        success: function(xml) {
+            if ($("result", xml).attr('type') == 'error')
+                editor.insertContent('Error: ' + $("result", xml).text());
+            else if ($("result", xml).attr('type') == 'logout') {
+                OnServerTimeout($("result", xml).text());
+            }
+            else {
+				editor.insertContent($("result", xml).text());
+            }
+        },    
+    error: function(jqXHR, textStatus, errorThrown) {
+      if(jqXHR.responseText) {
+        errors = JSON.parse(jqXHR.responseText).errors
+        alert('Error uploading image: ' + errors.join(", ") + '. Make sure the file is an image and has extension jpg/jpeg/png.');
+      }
+    }
+  });
+}
+	
+</script>
+
+
+<!-- /TinyMCE -->
+<!--
+<script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+<link href="scripts/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
+-->
+
+
+
+	<div id="idMessageBoxCont" class="cDialog" style="width:100%; position:absolute; bottom:0px; left:0px;display:none;z-index:10000;">
+	<div id="idMessageBox" style="margin-left:auto; margin-right:auto; width:400px; height:200px; background-color:pink; min-width:400px;min-height:200px;color:white;">
+	<p class="cDialogHeader">Message <img class="cDialogClose" src="images/DialogClose.png"></p>
+	<div id="idMessageText"></div></div></div>
+	<div id="idDemoArrow" class="draggable ui-draggable" style="display:none;[~DEMODISPLAY~];z-index:9999999;position:absolute;min-width:100px;xwidth:300px;xheight:300px;min-height:100px;">
+		<img id="idDemoArrowL" style="display:none;position:absolute;top:0px;left:0px;" src="images/demoleftarrow.png">
+		<img id="idDemoArrowT" style="display:none;position:absolute;top:0px;right:0px;" src="images/demotoparrow.png">
+		<img id="idDemoArrowR" style="display:none;position:absolute;top:0px;right:0px;" src="images/demorightarrow.png">
+		<img id="idDemoArrowB" style="display:none;position:absolute;bottom:0px;right:0px;" src="images/demobottomarrow.png">
+		<div id="idDemoArrowText" class="cbset">This is a <span style="color:yellow">Search Results Page</span> that lists the documents matching the selected criteria.<br><br>For document title or abstract search, a link to <span style="color:yellow">Page-by-Page View</span> is provided and for full text search a link to the PDF is provided. <br><br>If you are using Adobe Reader for viewing PDF's, our system will take advantage of utilizing Adobe Reader's capability to highlight searched keywords automatically wherever possible.</div>
+	</div>
+	<div id="idLargeProgress" style="display: none; width: 90px; height: 90px; left: 464.5px;"><img src="images/animated328.gif"></div>
+	<form id="idAjaxPost" action=""><input type="hidden" name="idAjaxPost" value="AJAX1"></form>
+	<div id="idBanner">
+		<div id="idProductName"><img alt="CSA banner Logo" id="idProductImage" border="0" src="images/skin/em100logo1000.png"></div>
+		<div id="idPageTimeoutMessage" style="display: none;">Resetting...</div>
+		<div id="idMobileMenuIcon"><img src="images/MobileMenuIcon.png"></div>
+	</div>
+	<img id="idDialogPointerR" src="images/DialogPointer.png">		
+		<div class="cLeftToolbars"><a name="navpanel"></a>
+			<div class="cLPToolbar">
+					<div title="Home" class="cLPToolbarItem" style="display:block;"><a id="idLPHome" href="dashboard.aspx"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Home1.jpg"><br>Home</a></div><!--TOOLHOME-->
+					<div title="Browse" class="cLPToolbarItem" style="display:none;"><a id="idLPBrowse" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Browse1.png"><br>Browse</a></div>						
+					<!--<div title="Level Up" class="cLPToolbarItem"><a href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" id="idLPLevelUp" src="images/icons/1/LevelUp1.jpg"><br>Level Up</a></div>-->
+					<div title="Related Documents" class="cLPToolbarItem" style="display:block;"><a id="idLPRelated" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Related1.jpg"><br>Related</a></div>
+					<div style="display:block;" class="cLPToolbarItem"><a title="Page-by-Page View" style="text-decoration:none;" id="idLPP2P" href="GetDoc.aspx?doc=CLSI M100 ED33:2023&amp;format=SPDF"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/PageByPage1.jpg"><br>Page-by-Page</a></div>
+					<div title="Download PDF" style="display:block;" class="cLPToolbarItem"></div>
+			</div>
+			<div class="cLPToolbar">
+					<div title="Table of Contents" class="cLPToolbarItem"><a id="idLPTOC" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/TOC1.jpg"><br>TOC</a></div>
+					<div title="Collapse/Expand Document Sections" class="cLPToolbarItem" style="display:none;"><a href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" id="idExpandCollapseSections" src="images/icons/1/CCollapse1.jpg"><br>Collapse</a></div>
+					<div title="Top of the Document" class="cLPToolbarItem"><a id="idLPTop" href="#DocTop"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/JumpTop1.jpg"><br>Top</a></div>
+					<div title="Bottom of the Document" class="cLPToolbarItem"><a id="idLPBottom" href="#DocBottom"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/JumpDown1.jpg"><br>Bottom</a></div>
+					<div title="Previous Search Result" class="cLPToolbarItem"><a id="idLPPrevious" href="javascript::void(0);" style="display:none;"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/NavArrowLeft1.jpg"><br>Previous</a></div>
+					<div title="Next Search Result" class="cLPToolbarItem"><a id="idLPNext" href="javascript::void(0);" style="display:none;"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/NavArrowRight1.jpg"><br>Next</a></div>
+					<div title="View Mode" class="cLPToolbarItem"><a id="idLPViewMode" href="javascript::void(0);"><img id="idLPViewModeIcon" class="cSelectedCitationsToolbarItem" src="images/icons/1/FullView1.jpg"><br><span style="display:inline-block;xwidth:40px;" id="idLPViewModeText">Full View</span></a></div>
+			</div>
+		</div>
+		<div class="cRightToolbars"><a name="toolbox"></a>
+			<div class="cLPToolbarR" style="display:none;">
+				<span style="white-space:nowrap;">
+					<div title="Clear Item Selections" class="cTPToolbarItem" style="display:none;"><a id="idClearItemSelections" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/ToolsClear1.jpg"><br>Clear</a></div>
+					<div title="Quick Link" class="cTPToolbarItem" style="display:none;"><a id="idQuickLink" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/QuickLink1.jpg"><br>Quick</a></div>
+					<div title="Add Annotation(s)" class="cTPToolbarItem" style="display:none;"><a id="idSelectedCitationsActionComments" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Annotation1.jpg"><br>Annotation</a></div>
+					<div title="Add Bookmark(s)" class="cTPToolbarItem" style="display:none;"><a id="idSelectedCitationsActionBookmark" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Bookmark1.jpg"><br>Bookmark</a></div>
+					<div title="Add Tag(s)" class="cTPToolbarItem" style="display:none;"><a id="idSelectedCitationsActionTag" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Tag1.png"><br>Tag</a></div>
+					<div title="Add Mark(s)" class="cTPToolbarItem" style="display:none;"><a id="idSelectedCitationsActionMark" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Mark1.jpg"><br>Mark</a></div>
+					<div title="Send" class="cTPToolbarItem" style="display:none;"><a id="idSelectedCitationsActionDiscuss" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Share1.jpg"><br>Send</a></div>
+					<div title="Add to Custom Collection" class="cTPToolbarItem" style="display:none;"><a id="idSelectedCitationsActionCollection" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Select1.jpg"><br>Collection</a></div>
+					<div title="Change Tracking" class="cTPToolbarItem" style="display:none;"><a id="idSelectedCitationsActionChange" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Change1.jpg"><br>Changes</a></div>
+					<div title="Printer Friendly" class="cTPToolbarItem" style="display:none;"><a id="idSelectedCitationsActionPrint" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Print1.jpg"><br>Print</a></div>					
+					<div title="Manage" class="cTPToolbarItem" style="display:none;"><a id="idManageUserData" href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" src="images/icons/1/Manage1.jpg"><br>Manage</a></div>
+				</span>
+			</div>			
+			<div class="cLPToolbarR3" style="display:none">
+				<div class="cLPToolbarTopLine">
+					 <!--<input type="radio" value="STypeD" checked id="idSTypeD" name="idSType">Designation 
+					 <input type="radio" value="STypeT" id="idSTypeT" name="idSType">Title
+					 <input type="radio" value="STypeF" id="idSTypeF" name="idSType">Full Text-->
+					 
+					<input type="radio" value="SC_DESIG" [$sc_desig$]="" id="idSCategory2_DESIG" name="fnSCategory2">Designation 
+					<input type="radio" value="SC_TEXT" checked="" id="idSCategory2_TEXT" name="fnSCategory2">Text 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<span text="Show Search Options" id="idShowSearchOptions">Options</span>&nbsp;|&nbsp;<span text="Clear Search Box Text" id="idClearSearchText">Clear</span>
+				</div>
+				<div title="Search" class="cTPToolbarItem">
+					<form id="idSearchFilterForm" action="" style="padding:0px;margin:0px;">
+						<span style="white-space:nowrap;">
+							<input class="cInputTextBanner" tabindex="1" id="idSearchTokens" autocomplete="off" name="idSearchTokens_IDMandatory" type="text" style="margin:0px;padding:0px;height:20px;" value="" maxlength="100">
+							<input class="cSelectedCitationsToolbarItem" id="idSearchSubmit" alt="Start Search" tabindex="2" title="Submit" type="image" target="_self" href="#" style="margin:0px;padding:0px;width:23px;height:23px;" src="images/icons/1/Search1.jpg">
+						</span> 
+						<br>Search
+					</form>							
+				</div>
+			</div>			
+			<div class="xcLPToolbarR" style="display:none">
+				<span style="white-space:nowrap;">
+					<!--<div title="Show Document Item Tools" class="cLPToolbarItem"><a href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" id="idShowAllTools" src="images/icons/1/Tools1.jpg"><br>Tools</a></div>-->
+					<!--<div title="Manage" class="cLPToolbarItem"><a href="javascript::void(0);"><img class="cSelectedCitationsToolbarItem" id="idManageUserData" src="images/icons/1/Manage1.jpg"><br>Manage</a></div>-->
+				</span>
+			</div>			
+		</div>
+	<div id="idMainToolbar" style="clear:both;">
+		<iframe id="idToolFrame" src="about:blank"></iframe>
+		<!--TOOLBAR DIALOG BOXES-->
+		<!-- SELECTED CITATIONS -->
+		<div id="idSelectedCitationsWrapper">
+			<span id="idFooterSelectedCitationCount"></span><span id="idFooterSelectedCitation">CLSI M100 ED33:2023 TABLE 1A</span>
+		</div>
+		<!-- SELECTED CITATIONS -->
+		<!-- COMMENT BOX DIALOG -->
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandComments" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+			<p class="cToolboxExpandHeader">Add Annotation</p>
+			<div class="cSelectedCitationsWrapperHeader">Selected Items:</div>
+			<div class="cSelectedCitationsWrapper" id="idSelectedCitationsWrapperComments"></div>
+			<!--<table border="1" style="border-collapse: collapse;border-style:solid; border-color:black; border-width:2px;"> <tbody> <tr> <td>	<b>XML:</b><br>		data1</td> </tr> <tr> <td> <b>CORRECTED HTML:</b><br>				data2</td> </tr> </tbody> </table>-->
+			<span id="idEditCommentID" style="display:none"></span> 
+			
+			<div class="cCommentTemplate" title="XML Issues" style="display:none;">			
+			<span style="color:blue;"><b>XML:</b></span><br>
+			data1
+			<hr size="1" style="color:black;">
+			<span style="color:blue;"><b>CORRECTED HTML:</b></span><br>
+			data2
+			<hr size="1" style="color:black;">
+			<span style="color:blue;"><b>ISSUE:</b></span><br>
+			data2
+			</div>
+			
+			<div class="cCommentTemplate" id="idCommentTemplateCompliance" title="XML Issues" style="display:none;">			
+			<span style="color:blue;"><b>Question:</b></span><br>
+			...
+			<hr size="1" style="color:black;">
+			<span style="color:blue;"><b>Solution:</b></span><br>
+			...
+			</div>
+			
+			<!--<div class="cSelectedCitationsWrapperHeader">Select Template:</div>
+			<select size="1" id="idCommentTemplate" name="idCommentTemplate">
+				<option value="None" selected>None</option>
+				<option value="Compliance">Compliance</option>
+			</select>--><br>
+			<div class="cSelectedCitationsWrapperHeader">Enter Comment</div>
+			<textarea id="idToolboxComment_IDMandatory" name="idToolboxComment_IDMandatory" rows="15" cols="80" style="z-index:999999;width: 490px;" class="tinymce"></textarea>
+			<br>
+			<div>
+				<span style="display:inline"><input class="cInputCheck" type="checkbox" id="idChkShare" name="idChkShare"> Shared (<span style="color:red;">Warning:</span> Your comment will be visible to all the named users of this account.)</span>
+			</div>
+			<br>
+			<form id="idSelectedCitationsCommentsForm" action="">
+				<p style="text-align:center;">
+					<img src="images/Submit.png" class="cInputButton" id="idToolboxCommentsSubmit" title="Submit" type="submit" target="_self" href="#">
+					<!--<button class="cInputButton" id="idToolboxCommentsSubmit" title="Submit" type="submit" target="_self" href="#">Save</button>-->
+				</p>
+			</form>
+			<p style="border-bottom-style:solid;">
+				<span id="idMessageComments" style="float:left;"></span>
+			</p>
+			<p><a href="annotationeditor.aspx">View My Annotations</a></p>
+		</div>
+		<!-- COMMENT BOX DIALOG -->
+		<div id="idAutoCompleteChoices" class="cAutoCompleteChoices2" style="display:none;"></div>
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandBookmark" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+			<p class="cToolboxExpandHeader">Add Bookmarks</p>
+			<div class="cSelectedCitationsWrapperHeader">Selected Items:</div>
+			<div class="cSelectedCitationsWrapper" id="idSelectedCitationsWrapperBookmark"></div>
+			<span id="idBookmarkDescriptionContainer" style="display: block;"><br><b>Description:</b><br><input style="width:300px;" class="cInputText" id="idBookmarkDescription" name="idBookmarkDescription" type="text" value="" maxlength="1100"></span>
+			<br><br><br>
+			<p style="text-align:center;"><img title="Add Bookmark(s)" id="idBookmarkGo" src="images/Submit.png"></p>			
+			<div id="idStatusbarBookmark" class="cExpandStatusbar"></div>
+			<p style="border-top-style:solid;padding-top:10px;"><a href="bookmarkeditor.aspx">View My Bookmarks</a></p>
+		</div>
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandChange" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel"><p class="cToolboxExpandHeader">Change Tracking</p>
+			Compare with:
+			<div id="idCompareWithList">Please wait...</div>
+		</div>
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandTag" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel"><p class="cToolboxExpandHeader">Add Tags</p>
+			<div class="cSelectedCitationsWrapperHeader">Selected Items:</div>
+			<div class="cSelectedCitationsWrapper" id="idSelectedCitationsWrapperTag"></div>
+			
+			<br><b>Tag Name:</b><br>Create New:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="cInputText" id="idTagText" name="idTagText" type="text" value="" maxlength="100">
+			<br>or <br>Select Existing:
+			<select size="1" id="idTagSelect" name="idTagSelect">
+				<option value="" selected="">&nbsp;</option>
+			</select>			
+			<br><br><br>
+			<!--<a id="idShareTag" class="cShareLink" href="javascript::void(0);">Share</a>
+			<br><br><br>-->
+			<p style="text-align:center;"><img src="images/Submit.png" class="cInputButton" id="idToolboxTagSubmit" title="Submit"></p>
+			<div id="idStatusbarTag" class="cExpandStatusbar"></div>			
+			<p style="border-top-style:solid;padding-top:10px;"><a href="taggeditemseditor.aspx">View My Tags/Custom Lists</a></p>			
+		</div>
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandChange" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel"><p class="cToolboxExpandHeader">Change Tracking</p>
+			Compare with:
+			<div id="idCompareWithList"></div>
+		</div>		
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandMark" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+			<p class="cToolboxExpandHeader">Add Marks</p>
+			<div class="cSelectedCitationsWrapperHeader">Selected Items:</div>
+			<div class="cSelectedCitationsWrapper" id="idSelectedCitationsWrapperMark"></div>			
+			<div id="idToolboxExpandMarkDynContainer"></div>
+			<br><br><br>
+			<p style="text-align:center;"><img src="images/Submit.png" class="cInputButton" id="idToolboxMarkSubmit" title="Submit" type="submit" target="_self" href="#"></p>
+			<div id="idStatusbarMark" class="cExpandStatusbar"></div>
+			<p style="border-top-style:solid;padding-top:10px;"><a href="importancemarkeditor.aspx">View My Importance Markers</a></p>			
+			<!--<button class="cInputButton" id="idToolboxMarkSubmit" title="Submit" type="submit" target="_self" href="#">Submit</button>-->
+		</div>
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandDiscuss" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+			<p class="cToolboxExpandHeader">Send Message:</p>
+			<div class="cSelectedCitationsWrapperHeader">Selected Items:</div>
+			<div class="cSelectedCitationsWrapper" id="idSelectedCitationsWrapperDiscuss"></div>
+		</div>			
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandCollection" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+			<p class="cToolboxExpandHeader">Add to Custom Collection</p>
+			<div class="cSelectedCitationsWrapperHeader">Selected Items:</div>
+			<div class="cSelectedCitationsWrapper" id="idSelectedCitationsWrapperCollection"></div>
+			<br><b>Collection Name:</b><br>Create New:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="cInputText" id="idCollectionText" name="idCollectionText" type="text" value="" maxlength="25"> 
+			<br>or <br>Select Existing:
+			<select size="1" id="idCollectionSelect" name="idCollectionSelect">
+				<option value="" selected="">&nbsp;</option>
+				<option value="Default">Default</option>
+				<option value="Watch List">Watch List</option>
+				<option value="Wish List">Wish List</option>
+			</select>
+			<br><br><br>
+			<p style="text-align:center;"><img src="images/Submit.png" class="cInputButton" id="idToolboxCollectionSubmit" title="Submit" type="submit" target="_self" href="#"></p>
+			<div id="idStatusbarCollection" class="cExpandStatusbar"></div>
+			<p style="border-top-style:solid;padding-top:10px;"><a href="collectionseditor.aspx">View My Custom Collections/Documents</a></p>
+		</div>			
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandManage" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+			<p class="cToolboxExpandHeader">Manage User Data</p>
+			<p>— <a href="bookmarkeditor.aspx">Bookmarks</a></p>
+			<p>— <a href="collectionseditor.aspx">Collections</a></p>
+			<p>— <a href="annotationeditor.aspx">Annotations</a></p>
+			<!--<p>&mdash; <a href="#">Friends</a></p>-->
+			<p>— <a href="importancemarkeditor.aspx">Importance Markers</a></p>
+			<!--<p>&mdash; <a href="#">Personal settings</a></p>-->
+			<!--<p>&mdash; <a href="#">Platform Themes</a></p>-->
+			<p>— <a href="taggeditemseditor.aspx">Tags</a></p>
+			<!---->
+		</div>
+		<div class="cSelectedCitationsToolboxExpand" id="idSelectedCitationsToolboxExpandPrint" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel"><p class="cToolboxExpandHeader">Generate Printer Friendly Output</p>
+			<div class="cSelectedCitationsWrapperHeader">Selected Items:</div>
+			<div class="cSelectedCitationsWrapper" id="idSelectedCitationsWrapperPrint"></div><br>
+			<p><b>Options:</b><br><select size="1" id="idPFType" name="idPFType">
+				<!--ADDNEWOPTIONS-->
+                <!--PRINTOPTIONS
+				<option selected value="DOCONLY">1. Selected items only</option>
+				<option value="DOCWITHCOMMENTS">2(a) Selected items along with Annotations (inline top)</option>
+				<option value="DOCWITHCOMMENTSSIDE">2(b) Selected items along with Annotations (inline side)</option>
+				<option value="DOCWITHCOMMENTSSEPARATE">2(c) Selected items along with Annotations (separate)</option>
+				<option value="DOCCOMMENTSONLY">3. Selected items containing Annotations only</option>
+				<option value="COMMENTSONLY">4. Annotations only</option>
+                    PRINTOPTIONS-->
+                
+				<option selected="" value="DOCONLY">1. Selected items only</option>
+				<option value="DOCWITHCOMMENTS">2. Selected items along with Annotations</option>
+				<option value="COMMENTSONLY">3. Selected items containing Annotations only</option>
+                    
+                <!--SDOHTMPRINTOPTIONS
+				<option value="DOCWITHCOMMENTSPDF">4. Selected items along with Annotations (PDF)</option>
+                    PRINTOPTIONSHTMSDO-->
+				</select></p>
+				<br><br>
+				<p style="text-align:center;"><img id="idPrinterFriendlyGo" src="images/Submit.png"></p>
+				<div id="idStatusbarPrinterFriendly" class="cExpandStatusbar"></div>
+		</div>		
+		<!-- SEARCH DIALOG START-->
+		<div class="cSelectedCitationsToolboxExpand" id="idSearchFormPanel" style="display: none; top: 2px;"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+			<p class="cToolboxExpandHeader">Search Options</p>
+				<p>
+					<b>Search inside:</b><br>
+					<span class="cDesigOnlyOptions"><input type="radio" value="SC_DESIG" [$sc_desig$]="" id="idSCategory_DESIG" name="fnSCategory">Designation</span>
+					<span class="cTextOnlyOptions">
+					<input type="radio" value="SC_TITLE" checked="" id="idSCategory_TITLE" name="fnSCategory">Title 
+					<input type="radio" value="SC_TITLEABSTRACT" [$sc_titleabstract$]="" id="idSCategory_TITLEABSTRACT" name="fnSCategory">Title and Abstract
+					<input type="radio" value="SC_FULLTEXT" [$sc_fulltext$]="" id="idSCategory_FULLTEXT" name="fnSCategory">Full Text</span>
+				</p> 
+				<p>
+					<b>Scope:</b><br>
+					<span class="cTextOnlyOptions"><span class="cAdobeOnlyOptions"><input type="radio" value="SC_CURRDOC" [$sc_currdoc$]="" id="idSScope_CURRDOC" name="fnSScope">Current Document</span></span>
+					<!--V2<input type="radio" value="SC_CURRMENU" [$SC_CURRMENU$] id="idSScope_CURRMENU" name="fnSScope">Current Menu-->
+					<input type="radio" value="SS_USER_ALL" checked="" id="idSScope_DESIG" name="fnSScope">All Documents (User)
+					
+				</p> 
+				<input type="hidden" value="CLSI M100 ED33:2023" id="idSeachDOCID" name="idSearchDOCID">
+				<!--<p>
+					<label for="idSearchOrder">Scope:</label>
+					<select tabIndex="4" id="idSearchScope" size="1" name="idSearchScope">
+						<option value="SC_C" selected>Current Standard/Menu</option>
+						<option value="SC_A" selected>All Documents</option>
+					</select>
+				</p>-->				
+				<!--<p>
+					<label for="idSearchScope">Search Scope:</label>
+					<select tabIndex="4" id="idSearchScope" size="1" name="idSearchScope">
+						<option value="SS_ALL" selected>Full Document Text</option>
+						<option value="SS_DT">Document Titles Only</option>
+						<option value="SS_DTST">Document and Section Titles Only</option>
+					</select>
+				</p>-->
+				<!--<p>
+					<label for="idSearchOrder">Search Result Display Order:</label>
+					<select tabIndex="4" id="idSearchOrder" size="1" name="idSearchOrder">
+						<option value="SO_SF" selected>Standard Flow</option>
+						<option value="SO_R">Ranking</option>
+					</select>
+				</p>-->
+				<p>
+					<b>Output Type:</b><br>
+					<input type="radio" value="SO_FILHIGH" checked="" id="idSOutput_FILHIGH" name="fnSOutput">Filtered document with highlight
+					<input type="radio" value="SO_HIGHONLY" [$so_highonly$]="" id="idSOutput_HIGHONLY" name="fnSOutput">Full document with highlight
+				</p>			
+				<!--<p>
+					<label for="idSearchOrder">Output Type:</label>
+					<select tabIndex="4" id="idSearchOutputType" size="1" name="idSearchOutputType">
+						<option value="SOT_F" selected>Filtered: Display content containing search tokens only</option>
+						<option value="SOT_H">Highlighted: Display full content with highlighted search tokens</option>
+					</select>
+				</p>-->
+				<p>
+					<!--<input class="cInputCheck" type="checkbox" name="idKeepLoggedIn" value="Y" checked> Order by ranking-->
+					<!--<input type="hidden" name="idSearchScope" value="[SEARCHSCOPE]">-->
+				</p>
+				<p style="text-align:center;"><a id="idSearchLinkTB" href="javascript::void(0);"><img border="0" src="images/Submit.png"></a></p>
+				<hr size="1">
+				<div id="idSearchHistory"></div>
+				<div id="idSearchHelp" style="font-size:90%">
+					<b>Note: </b><br>
+					<u>For Text Search</u>: <ul><li>Enter keywords separated with space to find documents containing any of the keywords within the category/scope, or</li>
+					  <li>Enter a phrase in quotes, e.g. "ethylene oxide sterilization".</li></ul>
+					<u>For Designation Search</u>:<br>
+					<ul><li>Enter partial or full designation of the Standard. e.g. Enter <i>2013</i> to find all the standards that have 2013 in the designation.</li></ul>
+				</div>				
+				<p>
+					<span id="idMessage" style="float:left;"></span>
+				</p>
+		</div>						
+		<!-- SEARCH DIALOG END-->			
+		<div id="idFooterFilters" style="display:none;"> 
+			<div id="idFooterIcons">
+				<p style="background-color:#909090;"><input id="HFOptionHighlight" type="radio" value="HIGHLIGHT" checked="" name="HFOption">Highlight / <input id="HFOptionFilter" type="radio" value="FILTER" name="HFOption">Filter</p>
+				<div id="idFilterToolbar">
+					<p class="cFootFilterItem"><a id="idFootFilterDateLink" class="cFootFilterLink" href="#"><img class="cFootFilterLinkImage" src="images/LPFilterbyDate.png"><span class="cFootFilterLinkText"><br>Date</span></a><span class="cFootFilterValueText"></span></p>
+					<p class="cFootFilterItem"><a id="idFootFilterCategoryLink" class="cFootFilterLink" href="#"><img class="cFootFilterLinkImage" src="images/LPFilterbyCategory.png"><span class="cFootFilterLinkText"><br>Category</span></a><span class="cFootFilterValueText"></span></p>
+					<p class="cFootFilterItem"><a id="idFootFilterKeywordsLink" class="cFootFilterLink" href="#"><img class="cFootFilterLinkImage" src="images/LPFilterbyKeywords.png"><span class="cFootFilterLinkText"><br>Keywords</span></a><span class="cFootFilterValueText"></span></p>
+				</div>
+			</div>
+		</div>	
+		<div id="idCategoryFilterPanel" class="cFooterRightPanelContainer" style="display:none">
+			<label for="idFilterCategory">Select Category:</label>
+			<select tabindex="4" id="idFilterCategory" size="1" name="idFilterCategory">
+				<option value="CAT_ENV">Environment</option>
+				<option value="CAT_ENV_AIR">&nbsp;     Air</option>
+				<option value="CAT_ENV_WATER">&nbsp;     Water</option>
+				<option value="CAT_ENV_HW">&nbsp;     Hazardous Waste</option>
+				<option value="CAT_SAFETY">Safety</option>
+			</select>
+		</div>
+		<div id="idDateFilterPanel" class="cFooterRightPanelContainer" style="display:none">
+			<div id="idFilterDate">
+				<div style="margin:10px;position:relative;" id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+				<a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 7.14286%;"></a></div>
+			    <div id="idFilterDateSliderValue" style="top:200px;">No Value</div>
+			</div>
+			<hr size="1">
+			<div>Date: <input type="text" id="datepicker" class="hasDatepicker"><button type="button" class="ui-datepicker-trigger">...</button></div>	
+		</div>
+	</div> 	
+	<div style="display: none; height: 794px; width: 464.5px; right: 0px; top: 78px;" id="idRightPane"><img class="cSelectedCitationsToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+		<img id="idSplitter2" src="images/Splitter.png">
+		<div id="idLinkPeekHeader">Link Peek</div>
+		<div id="idPrintf" style="height: 731px;">
+			<!---->
+			<div style="display:none"><span id="idLinkPeekDoc"></span></div>	
+		</div>
+	</div>
+	<div style="display:none;" id="idRightPaneExtra">
+		<img id="idSplitter2Extra" src="images/Splitter.png">
+		<div id="idLinkPeekHeaderExtra">Link Peek</div>
+		<div id="idPrintfExtra">
+			<!---->
+			<div style="display:none"><span id="idLinkPeekDocExtra"></span></div>	
+		</div>
+	</div>		
+	<div id="idLEFTEXTENSION" style="height: 777px; width: 402.5px; top: 78px; left: 76px;">
+		<div id="idSplitter3" style="width:7px;background-image: url('images/Splitter.png'); background-repeat: repeat-y;"></div>
+		<div id="idLEFTEXTENSIONInner" style="height: 739px;">
+		</div>		
+	</div>		
+	<iframe id="idTOCFrame" src="about:blank" style="height: 789px; top: 78px; left: 76px;"></iframe>
+	<iframe id="idRightFrame" src="about:blank" style="height: 794px; top: 78px; width: 464.5px;"></iframe>
+	<div id="idTOC" style="height: 777px; width: 402.5px; top: 78px; left: 76px;">
+		<div id="idTOCInner" style="height: 739px;">
+		<div id="idSplitter" style="width:7px;background-image: url('images/Splitter.png'); background-repeat: repeat-y;"></div>
+		<div id="idTOCHeader"><img id="idTOCClose" src="images/DialogClose.png"><img id="idTOCPin" src="images/Pin.png">Table of Contents</div>		
+			
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION ABSTRACT"><b>Abstract</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION COMMITTEE MEMBERSHIP"><b>Committee Membership</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION OVERVIEW OF CHANGES"><b>Overview of Changes</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION CLSI BREAKPOINT ADDITIONS SINCE 2010"><b>CLSI Breakpoint Additions Since 2010</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION CLSI BREAKPOINT REVISIONS SINCE 2010"><b>CLSI Breakpoint Revisions Since 2010</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION CLSI ARCHIVED RESOURCES"><b>CLSI Archived Resources</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION SUMMARY OF CLSI PROCESSES FOR ESTABLISHING BREAKPOINTS AND QUALITY CONTROL RANGES"><b>Summary of CLSI Processes for Establishing Breakpoints and Quality Control Ranges</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION CLSI REFERENCE METHODS VS COMMERCIAL METHODS AND CLSI VS US FOOD AND DRUG ADMINISTRATION BREAKPOINTS"><b>CLSI Reference Methods vs Commercial Methods and CLSI vs US Food and Drug Administration Breakpoints</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION SUBCOMMITTEE ON ANTIMICROBIAL SUSCEPTIBILITY TESTING MISSION STATEMENT"><b>Subcommittee on Antimicrobial Susceptibility Testing Mission Statement</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION INSTRUCTIONS FOR USE OF TABLES"><b>Instructions for Use of Tables</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION REFERENCES"><b>References</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION INTRODUCTION TO TABLES 1A-1P. ANTIMICROBIAL AGENTS THAT SHOULD BE CONSIDERED FOR TESTING AND REPORTING BY MICROBIOLOGY LABORATORIES"><b>Introduction to Tables 1A-1P.</b> <b>Antimicrobial Agents That Should Be Considered for Testing and Reporting by Microbiology Laboratories</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1A"><b><span class="catCorrection">Table 1A. Enterobacterales (not including <i>Salmonella</i>/<i>Shigella</i>)<sup>a</sup></span></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1B"><b>Table 1B. <i>Salmonella </i>and <i>Shigella </i>spp.<sup>a,b</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1C"><b>Table 1C. <i>Pseudomonas aeruginosa</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1D"><b>Table 1D. <i>Acinetobacter </i>spp.</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1E"><b>Table 1E. <i>Burkholderia cepacia </i>complex</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1F"><b>Table 1F. <i>Stenotrophomonas maltophilia</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1G"><b>Table 1G. Other Non-Enterobacterales<sup>a,b</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1H"><b>Table 1H. <i>Staphylococcus </i>spp.</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1I"><b>Table 1I. <i>Enterococcus </i>spp.</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1J"><b>Table 1J. <i>Haemophilus influenzae </i>and <i>Haemophilus parainfluenzae</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1K"><b>Table 1K. <i>Neisseria gonorrhoeae</i><sup>a</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1L"><b>Table 1L. <i>Streptococcus pneumoniae</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1M"><b>Table 1M. <i>Streptococcus </i>spp. β-Hemolytic Group</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1N"><b>Table 1N. <i>Streptococcus </i>spp. Viridans Group</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1O"><b>Table 1O. Gram-Negative Anaerobes</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 1P"><b>Table 1P. Gram-Positive Anaerobes</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2A"><b>Table 2A. Zone Diameter and MIC Breakpoints for Enterobacterales</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2B-1"><b>Table 2B-1. Zone Diameter and MIC Breakpoints for <i>Pseudomonas aeruginosa</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2B-2"><b>Table 2B-2. Zone Diameter and MIC Breakpoints for <i>Acinetobacter </i>spp.</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2B-3"><b>Table 2B-3. Zone Diameter and MIC Breakpoints for <i>Burkholderia cepacia </i>complex</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2B-4"><b>Table 2B-4. Zone Diameter and MIC Breakpoints for <i>Stenotrophomonas maltophilia</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2B-5"><b>Table 2B-5. MIC Breakpoints for Other Non-Enterobacterales (Refer to General Comment [2])</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2C"><b>Table 2C. Zone Diameter and MIC Breakpoints for <i>Staphylococcus </i>spp.</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2D"><b>Table 2D. Zone Diameter and MIC Breakpoints for <i>Enterococcus </i>spp.</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2E"><b>Table 2E. Zone Diameter and MIC Breakpoints for <i>Haemophilus influenzae </i>and <i>Haemophilus parainfluenzae</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2F"><b>Table 2F. Zone Diameter and MIC Breakpoints for <i>Neisseria gonorrhoeae</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2G"><b>Table 2G. Zone Diameter and MIC Breakpoints for <i>Streptococcus pneumoniae</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2H-1"><b>Table 2H-1. Zone Diameter and MIC Breakpoints for <i>Streptococcus </i>spp. β-Hemolytic Group</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2H-2"><b>Table 2H-2. Zone Diameter and MIC Breakpoints for <i>Streptococcus </i>spp. Viridans Group</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2I"><b>Table 2I. Zone Diameter and MIC Breakpoints for <i>Neisseria meningitidis</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 2J"><b>Table 2J. MIC Breakpoints for Anaerobes</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3A"><b>Table 3A. Tests for Extended-Spectrum β-Lactamases in <i>Klebsiella pneumoniae, Klebsiella oxytoca, Escherichia coli, </i>and <i>Proteus mirabilis</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION INTRODUCTION TO TABLES 3B AND 3C. TESTS FOR CARBAPENEMASES IN ENTEROBACTERALES AND PSEUDOMONAS AERUGINOSA"><b>Introduction to Tables 3B and 3C. Tests for Carbapenemases in Enterobacterales and <i>Pseudomonas aeruginosa</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3B"><b>Table 3B. CarbaNP Test for Suspected Carbapenemase Production in Enterobacterales and <i>Pseudomonas aeruginosa</i><sup>1-7</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3C"><b>Table 3C. Modified Carbapenem Inactivation Methods for Suspected Carbapenemase Production in Enterobacterales and <i>Pseudomonas aeruginosa</i><sup>1-6</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3D"><b>Table 3D. Tests for Colistin Resistance for Enterobacterales and <i>Pseudomonas aeruginosa</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3E-1"><b>Table 3E-1. Test for Performing Disk Diffusion Directly From Positive Blood Culture Broth</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3E-2"><b>Table 3E-2. Zone Diameter Disk Diffusion Breakpoints for Enterobacterales Direct From Blood Culture</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3E-3"><b>Table 3E-3. Zone Diameter Disk Diffusion Breakpoints for <i>Pseudomonas aeruginosa </i>Direct From Blood Culture</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3F"><b>Table 3F. Tests for Detection of β-Lactamase Production in <i>Staphylococcus </i>spp.</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3G-1"><b>Table 3G-1. Test for Detecting Methicillin (Oxacillin) Resistance in <i>Staphylococcus aureus</i></b><sup>a</sup><b> and <i>Staphylococcus lugdunensis</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3G-2"><b>Table 3G-2. Test for Detecting Methicillin (Oxacillin) Resistance in <i>Staphylococcus </i>spp. Except <i>Staphylococcus aureus</i></b><sup>a</sup> <b>and <i>Staphylococcus lugdunensis</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3H"><b>Table 3H. Vancomycin Agar Screen for <i>Staphylococcus aureus </i>and <i>Enterococcus </i>spp.</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3I"><b>Table 3I. Tests for Detecting Inducible Clindamycin Resistance in <i>Staphylococcus </i>spp., <i>Streptococcus pneumoniae, </i>and <i>Streptococcus </i>spp. β-Hemolytic Group</b><sup>a,b</sup></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3J"><b>Table 3J. Test for Detecting High-Level Mupirocin Resistance in <i>Staphylococcus aureus</i></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 3K"><b>Table 3K. Test for Detecting High-Level Aminoglycoside Resistance in <i>Enterococcus </i>spp.</b><sup>a</sup> <b>(includes disk diffusion)</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 4A-1"><b>Table 4A-1. Disk Diffusion QC Ranges for Nonfastidious Organisms and Antimicrobial Agents Excluding β-Lactam Combination Agents<sup>a</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 4A-2"><b>Table 4A-2. Disk Diffusion QC Ranges for Nonfastidious Organisms and β-Lactam Combination Agents</b><sup>a</sup></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 4B"><b>Table 4B. Disk Diffusion QC Ranges for Fastidious Organisms</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 4C"><b>Table 4C. Disk Diffusion Reference Guide to QC Frequency</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 4D"><b>Table 4D. Disk Diffusion Troubleshooting Guide</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 5A-1"><b>Table 5A-1. MIC QC Ranges for Nonfastidious Organisms and Antimicrobial Agents Excluding β-Lactam Combination Agents<sup>a</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 5A-2"><b>Table 5A-2. MIC QC Ranges for Nonfastidious Organisms and β-Lactam Combination Agents<sup>a</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 5B"><b>Table 5B. MIC QC Ranges for Fastidious Organisms (Broth Dilution Methods)</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 5C"><b>Table 5C. MIC QC Ranges for <i>Neisseria gonorrhoeae </i>(Agar Dilution Method)</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 5D"><b>Table 5D. MIC QC Ranges for Anaerobes (Agar Dilution Method)</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 5E"><b>Table 5E. MIC QC Ranges for Anaerobes (Broth Microdilution Method)</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 5F"><b>Table 5F. MIC Reference Guide to QC Frequency</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 5G"><b>Table 5G. MIC Troubleshooting Guide</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 6A"><b>Table 6A. Solvents and Diluents for Preparing Stock Solutions of Antimicrobial Agents<sup>a</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 6B"><b>Table 6B. Preparing Stock Solutions for Antimicrobial Agents Provided With Activity Expressed as Units</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 6C"><b>Table 6C. Preparing Solutions and Media Containing Combinations of Antimicrobial Agents</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 7"><b>Table 7. Preparing Dilutions of Antimicrobial Agents to Be Used in Agar Dilution Susceptibility Tests</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 8A"><b>Table 8A. Preparing Dilutions of Antimicrobial Agents to Be Used in Broth Dilution Susceptibility Tests</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 TABLE 8B"><b>Table 8B. Preparing Dilutions of Water-Insoluble Antimicrobial Agents to Be Used in Broth Dilution Susceptibility Tests</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX A"><b>Appendix A. Suggestions for Confirming Antimicrobial Susceptibility Test Results and Organism Identification for Agents Approved by the US Food and Drug Administration for Clinical Use</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX B"><b>Appendix B. Intrinsic Resistance</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX C"><b>Appendix C. QC Strains for Antimicrobial Susceptibility Tests</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX D"><b>Appendix D. Anaerobe Cumulative Antibiogram<sup>1</sup></b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX E"><b>Appendix E. Dosage Regimens Used to Establish Susceptible or Susceptible-Dose Dependent Breakpoints</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX F"><b>Appendix F. Susceptible-Dose Dependent Interpretive Category</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX G"><b>Appendix G. Epidemiological Cutoff Values</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX H"><b>Appendix H. Using Molecular Assays for Resistance Detection</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 APPENDIX I"><b>Appendix I. Cefiderocol Broth Preparation and Reading Broth Microdilution Minimal Inhibitory Concentration End Points</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION GLOSSARY I (PART 1)"><b>Glossary I (Part 1).</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION GLOSSARY I (PART 2)"><b>Glossary I (Part 2).</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION GLOSSARY II. ANTIMICROBIAL AGENT ABBREVIATIONS ROUTES OF ADMINISTRATION AND DRUG CLASS"><b>Glossary II. Antimicrobial Agent Abbreviations, Routes of Administration, and Drug Class</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION GLOSSARY III. LIST OF IDENTICAL ABBREVIATIONS USED FOR MORE THAN ONE ANTIMICROBIAL AGENT IN US DIAGNOSTIC PRODUCTS"><b>Glossary III. List of Identical Abbreviations Used for More Than One Antimicrobial Agent in US Diagnostic Products</b></a></div></div><!--1-->
+
+<div format="SBYS" page="" class="cTOCEntry cTOCEntry1"><div class="cTOCEntryContainer">	<img class="cTOCExpandCollapseStub" src="images/ExpandStub.gif">– <img class="cLinkPeek4" src="images/LinkPeek.png"><a class="cTOCLink" href="#CLSI M100 ED33:2023 SECTION THE QUALITY MANAGEMENT SYSTEM APPROACH"><b>The Quality Management System Approach</b></a></div></div><!--1-->
+<hr size="1">
+		</div>
+	</div>
+	<div id="idShareContainer" style="font-family:Arial;display:none;position:absolute;z-index:9999; border-color:#909090; border-style:solid; border-width:3px; background-color:#e0e0e0;top:40%;left:40%;width:400px;height:400px;">
+		<div style="font-size:120%"><b>Share <span id="idShareCat"></span>: <span id="idShareCatValue"></span></b></div><br><br>
+		<b>List of Users/Groups</b>
+		<div id="idUserGroupContainer" style="background-color:white;width:100%;max-height:300px;overflow: scroll;"></div><br>
+		<div style="text-align:center"><a href="javascript::void(0);" id="idSubmitShareUserData">Submit</a>&nbsp;&nbsp;&nbsp;<a href="javascript::void(0);" id="idCancelShareUserData">Cancel</a></div>	
+		<div id="idShareMessage" style="color:red;"></div>
+	</div>
+	<div id="idWaitingPanel" style="display:none;position:absolute;top:0px;left:0px;opacity:0.6;width:100%;height:100%; background-color:#909090;z-index:900;text-align:center;font-size:140%;color:white;">Populating Tools...</div>
+	<div id="idWrapper" xstyle="display:table-row" style="max-height: 794px; min-height: 794px;">
+		<div style="position:fixed;right:0px;top:0px;width:1px;height:1px;background:transparent;" id="idETPasteBufferEx"><p style="padding-left:20px;">Start</p><p style="padding-left:20px;">Start2</p></div>
+		<div style="position:fixed;right:0px;top:0px;width:1px;height:1px;background:transparent;" id="idText">Hellosss</div>
+		<a name="DocTop"></a>
+		<div class="cLeftPane" id="idLeftPane" style="top: 78px;"></div>
+		<!--<div id="xidLeftPane2" style="display:table-cell;width:1px;position:relative;"><img id="idImgFiller" src="images/Filler60.gif">	</div>-->
+		<div id="idContent" xonkeypress="return disableCtrlKeyCombination(event);" xonkeydown="return disableCtrlKeyCombination(event);" style="min-height: 760px; left: 0px;">
+			<!---->			
+			
+			<a name="content"></a><div id="idDocContent">	
+<section class="cDocTitleSection" citation="CLSI M100 ED33:2023"><div class="cDocTitle"><span class="cDocItemSelectorContainer"></span><b>CLSI M100-ED33:2023 Performance Standards for Antimicrobial Susceptibility Testing, 33rd Edition</b></div>
+<div class="cCommentsContainer"></div><div class="cTagsContainer"></div></section><div style="text-align: center; margin-bottom: 10px;"><input id="idPubSearchText" type="text" maxlength="250" style="border-radius:3px;width:220px;height:35px;xpadding:0px;xmargin:0px;border-bottom-right-radius:0px;border-top-right-radius:0px;transition:none;font-size:110%;line-height:1.25;border:1px solid #ccc;box-shadow:none;border-width:1px;" value="">
+			<button id="idPubSearchDocument" style="border-radius:3px;border-bottom-left-radius:0px; border-top-left-radius:0px; height:39px;xpadding:0px;xmargin:0px;transition:none;font-size:110%;line-height:1.25;border:1px solid #ccc;box-shadow:none;margin-left:-5px;border-width:1px;" type="button" value="PubSearch">Search within this Document</button></div>
+<div class="cNavBarSBS"><a id="idShowDocTOC" href="javascript::void(0);">Table of Contents</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="cNavSBSPrev" href="GetDoc.aspx?doc=CLSI M100 ED33:2023&amp;sbssok=CLSI M100 ED33:2023 TABLE 1A [PREV]">&lt; Previous</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a class="cNavSBSNext" href="GetDoc.aspx?doc=CLSI M100 ED33:2023&amp;sbssok=CLSI M100 ED33:2023 TABLE 1A [NEXT]">Next &gt;</a> </div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<a name="CLSI M100 ED33:2023 TABLE 1A"></a><section class="cSelected" citation="CLSI M100 ED33:2023 TABLE 1A" id="CLSI M100 ED33:2023 TABLE 1A">
+	<h1 class="cSelected"><b><span class="catCorrection">Table 1A. Enterobacterales (not including <i>Salmonella</i>/<i>Shigella</i>)<sup>a</sup></span></b></h1>
+	
+<a name="CLSI M100 ED33:2023 TABLE 1A [Table Data]"></a><section citation="CLSI M100 ED33:2023 TABLE 1A [Table Data]" id="CLSI M100 ED33:2023 TABLE 1A [Table Data]">
+	<div class="cDataContainer"><table style="border-width: 0px; border-collapse: collapse" class="indentlvl1"> <tbody><tr> <td style="text-align: center; width: 200px; border-style: solid; border-width: 2px; background-color: #2FA9E0" valign="bottom"> <p style="color:white"><b>Tier 1: Antimicrobial agents that are appropriate for routine, primary testing and reporting</b></p> </td> <td style="text-align: center; width: 260px; border-style: solid; border-width: 2px; background-color: #2FA9E0" valign="bottom"> <p style="color:white"><b>Tier 2: Antimicrobial agents that are appropriate for routine, primary testing but may be reported following cascade reporting rules established at each institution</b></p> </td> <td style="text-align: center; width: 260px; border-style: solid; border-width: 2px; background-color: #2FA9E0" valign="bottom"> <p style="color:white"><b>Tier 3: Antimicrobial agents that are appropriate for routine, primary testing in institutions that serve patients at high risk for MDROs but should only be reported following cascade reporting rules established at each institution</b></p> </td> <td style="text-align: center; width: 230px; border-style: solid; border-width: 2px; background-color: #2FA9E0" valign="bottom"> <p style="color:white"><b>Tier 4: Antimicrobial agents that may warrant testing and reporting by clinician request if antimicrobial agents in other tiers are not optimal because of various factors</b></p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px"> <p><b>Ampicillin</b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px"> <p><b>Cefazolin</b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p><b>Cefuroxime</b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td rowspan="5" style="width: 200px; border-style: solid; border-width: 2px" valign="top"> <p><b>Cefotaxime or ceftriaxone<sup>b</sup></b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px" valign="top"> <p><b>Cefepime<sup>c</sup></b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px" valign="top"> <p>&nbsp;</p> </td> <td rowspan="5" style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td rowspan="4" style="width: 260px; border-left-width: 2px; border-right-style: solid; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px" valign="top"> <p><b>Ertapenem</b><br><b>Imipenem</b><br><b>Meropenem</b></p> </td> <td style="width: 260px; border-left-style: solid; border-left-width: 2px; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px" valign="top"> <p><b>Cefiderocol</b></p> </td> </tr> <tr> <td style="width: 260px; border-left-width: 2px; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px" valign="top"> <p><b>Ceftazidime-avibactam</b></p> </td> </tr> <tr> <td style="width: 260px; border-left-width: 2px; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px" valign="top"> <p><b>Imipenem-relebactam</b></p> </td> </tr> <tr> <td style="width: 260px; border-left-width: 2px; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px" valign="top"> <p><b>Meropenem-vaborbactam</b></p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px"> <p><b>Amoxicillin-clavulanate Ampicillin-sulbactam</b></p> </td> <td rowspan="2" style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td rowspan="2" style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td rowspan="2" style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td style="width: 200px; border-left-style: solid; border-left-width: 2px; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px"> <p><b>Piperacillin-tazobactam</b></p> </td> </tr> <tr> <td rowspan="2" style="width: 200px; border-style: solid; border-width: 2px" valign="top"> <p><b>Gentamicin</b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px" valign="top"> <p><b>Tobramycin</b></p> </td> <td rowspan="2" style="width: 260px; border-style: solid; border-width: 2px" valign="top"> <p><b>Plazomicin</b></p> </td> <td rowspan="2" style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td style="width: 260px; border-left-width: 2px; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px" valign="top"> <p><b>Amikacin</b></p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px"> <p><b>Ciprofloxacin</b><br><b>Levofloxacin</b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px"> <p><b>Trimethoprim-sulfamethoxazole</b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p><b>Cefotetan</b><br><b>Cefoxitin</b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p><b>Tetracycline<sup>d</sup></b></p> </td> <td style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p><b>Aztreonam</b></p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p><b>Ceftaroline<sup>b</sup></b></p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p><b>Ceftazidime<sup>b</sup></b></p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 260px; border-style: solid; border-width: 2px; background-color: #A6A6A6"> <p>&nbsp;</p> </td> <td style="width: 230px; border-style: solid; border-width: 2px"> <p><b>Ceftolozane-tazobactam</b></p> </td> </tr> <tr> <td colspan="4" style="border-style: solid; border-width: 2px; background-color: #2FA9E0"> <p style="color:white"><b>Urine Only</b></p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px"> <p><b>Cefazolin (surrogate for uncomplicated UTI)<sup>e</sup></b></p> </td> <td rowspan="3" style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td rowspan="2" style="width: 260px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td rowspan="3" style="width: 230px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> </tr> <tr> <td style="width: 200px; border-left-style: solid; border-left-width: 2px; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px"> <p><b>Nitrofurantoin</b></p> </td> </tr> <tr> <td style="width: 200px; border-style: solid; border-width: 2px"> <p>&nbsp;</p> </td> <td style="width: 260px; border-left-style: solid; border-left-width: 2px; border-right-width: 2px; border-top-style: solid; border-top-width: 2px; border-bottom-style: solid; border-bottom-width: 2px"> <p><b>Fosfomycin<sup>f</sup> (<i>Escherichia coli</i>)</b></p> </td> </tr> </tbody></table></div>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 2"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 2" id="CLSI M100 ED33:2023 TABLE 1A PARA 2">
+	<p><b>Abbreviations: MDRO, multidrug-resistant organism; UTI, urinary tract infection.</b></p>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 3"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 3" id="CLSI M100 ED33:2023 TABLE 1A PARA 3">
+	<p><b><u>Footnotes</u></b></p>
+	
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 1"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 1" id="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 1">
+	<p><b>a. See Appendix B for species-specific intrinsic resistance profiles. If an antimicrobial agent–organism combination that is defined as intrinsically resistant is tested, the result hould be reported as resistant. Consideration may be given to adding comments regarding intrinsic resistance of agents not tested.</b></p>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 2"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 2" id="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 2">
+	<p><b>b. <i>Citrobacter freundii </i>complex, <i>Enterobacter cloacae </i>complex, <i>Hafnia alvei, Klebsiella </i>(formerly <i>Enterobacter) aerogenes</i>, <i>Morganella morganii, Providencia </i>spp., <i>Serratia marcescens</i>, and <i>Yersinia enterocolitica </i>may test susceptible to ceftriaxone, cefotaxime, ceftazidime, and ceftaroline, but these agents may be ineffective against these genera within a few days after initiation of therapy due to derepression of inducible AmpC β-lactamase. The risk of AmpC derepression during therapy is moderate to high with <i>C. freundii </i>complex, <i>E. cloacae complex, </i>and <i>K. aerogenes </i>and appears to be less frequent with <i>M. morganii, Providencia </i>spp., and <i>S. marcescens.</i><sup>1</sup> Therefore, isolates that are initially susceptible may become resistant. Testing subsequent isolates may be warranted if clinically indicated.</b></p>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 3"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 3" id="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 3">
+	<p><b>c. Cefepime should be considered a Tier 1 agent for testing and/or reporting of <i>C. freundii </i>complex, <i>E. cloacae </i>complex, <i>H. alvei, K. aerogenes</i>, <i>M. morganii, Providencia </i>spp., <i>S. marcescens</i>, and <i>Y. enterocolitica </i>(see footnote b).<sup>1</sup></b></p>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 4"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 4" id="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 4">
+	<p><b>d. Organisms that are susceptible to tetracycline are also considered susceptible to doxycycline and minocycline. However, some organisms that are intermediate or resistant to tetracycline may be susceptible to doxycycline or minocycline, or both.</b></p>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 5"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 5" id="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 5">
+	<p><b>e. See cefazolin comments in Table 2A for using cefazolin as a surrogate test for oral cephalosporins and for reporting cefazolin when used for therapy in uncomplicated UTIs.</b></p>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 6"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 6" id="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 6">
+	<p><b>f. Report only on <i>E. coli </i>isolated from the urinary tract.</b></p>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 7"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 7" id="CLSI M100 ED33:2023 TABLE 1A PARA 3 PARA 7">
+	<p><b>NOTE: Information in black boldface type is new or modified since the previous edition.</b></p>
+	</section>
+	</section>
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 4"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 4" id="CLSI M100 ED33:2023 TABLE 1A PARA 4">
+	<p><b>Reference for Table 1A</b></p>
+	
+<a name="CLSI M100 ED33:2023 TABLE 1A PARA 4 PARA 1"></a><section citation="CLSI M100 ED33:2023 TABLE 1A PARA 4 PARA 1" id="CLSI M100 ED33:2023 TABLE 1A PARA 4 PARA 1">
+	<p><b><sup>1</sup> Tamma PD, Aitken SL, Bonomo RA, Mathers AJ, van Duin D, Clancy CJ. IDSA Guidance on the treatment of antimicrobial-restant gram-negative infections: version 2.0. Infectious Diseases Society of America; 2022. Accessed 10 January 2023. <a href="https://www.idsociety.org/practice-guideline/amr-guidance-2.0/">https://www​.idsociety​.org/practice​-guideline​/amr-guidance​-2.0​/</a></b></p>
+	</section>
+	</section>
+	</section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div>
+			<div id="idUsageReportContainer" style="display:none;">
+				<div id="idUsageReportHeader">Usage Report </div><br>
+				<div id="idUsageReportOptions">					
+						
+					<label class="cLabelIndent1" for="idReportType">Select Report Type:</label>
+						<select size="1" id="idReportType" name="idReportType">
+							<option selected="">Page Hits</option>
+							<option>Feature Hits</option>
+						</select>
+					<p style="clear:both;"><label class="cLabelIndent1" for="idReportRange2">Select Range:</label>
+						<select size="1" id="idReportRange2" name="idReportRange2">
+							<!--REPORTRANGEOPTIONS-->
+							<!--V2<option>This Year - By Month</option>
+							<option>Last Year - By Month</option>
+							<option>All Time - By Year</option>-->
+							<!--ADDITIONALREPORTRANGEOPTIONS-->
+						</select></p>					
+							<p><label class="cLabelIndent1" for="idReportStartDate">Start Date:</label> <input disabled="disabled" class="cIndent1 hasDatepicker" type="text" id="idReportStartDate" value="[$ReportStartDate$]" name="idReportStartDate"> &nbsp;&nbsp;&nbsp;&nbsp;<br>
+							<label class="cLabelIndent1" for="idReportEndDate">End Date:</label> <input disabled="disabled" class="cIndent1 hasDatepicker" type="text" id="idReportEndDate" value="[$ReportEndDate$]" name="idReportEndDate"><br><br><a class="cETLinkButton" id="idGenerateReport" href="javascipt::void(0);">Generate Report</a></p>
+						
+				</div><br>
+				<div id="idUsageReportOutput">
+					
+				</div>	
+				<div id="idUsageReportOutputDetails">
+					
+				</div>	
+			</div>
+			<!--<br/><br/>
+			<div id="idCopyrightMessage">&copy; 2014 Edaptive Technologies LLC  | Privacy Policy</div>-->
+		</div>		
+	<a name="DocBottom"></a>
+	</div> 
+	<div id="idExtra" style="height: 772px; top: 78px; display: none;">
+		<!--<div style="text-align:center;	background-image: url('images/tab1.png');background-repeat: repeat-x; color:white;font-family:'Calibri';">Alerts</div>
+		<p>None</p>
+		<div style="text-align:center;	background-image: url('images/tab1.png');background-repeat: repeat-x; color:white;font-family:'Calibri';">Active Users</div>
+		<p>None</p>-->
+		<!--<div id="idRecommended">Recommended Resources</div><br>-->
+		<div style="text-align:center; background-color:#004DA0;height:100%;"><a style="text-decoration:none;" target="_blank" href="http://shop.clsi.org/M100plus.html"><img border="0" src="partner/clsi/m100/SidebarImages_M100-05.png"></a></div>
+	</div>
+	<iframe id="idBottomToolFrame" src="about:blank"></iframe>
+	<div class="cFooterExpandNew" id="idFooterExpandFeedback" style="display:none;"><img class="cFooterFeedbackToolboxDialogClose" src="images/DialogClose.png" title="Close this panel">
+		<p style="background-color:#909090;color:white;margin:0px;padding:0px;">Support/Feedback</p>
+		<p>Please enter your comments:<br>
+			  <textarea id="idFeedbackText" cols="50" rows="10"></textarea><br>Email Address:<br>  <input id="idFeedbackEmail" type="text" style="width:200px;"><br>
+		Category:<br>  <select id="idFeedbackCategory"><option value="">Select Category: </option><option value="Technical">Technical</option><option value="Other">Other</option></select><br>
+		</p>
+		<div style="text-align:center;"><img title="Submit Feedback" id="idFeedbackGo" src="images/Submit.png"></div>
+	</div>		
+	<iframe id="idFullFrame" src="about:blank"></iframe>
+	<div id="idFooterHelp">
+	</div>
+	<div id="idFooter">
+		<div style="background-image:url('images/metalback8.png');width:100px;height:50px;position:absolute;left:0px;top:0px;display:none;"></div>
+		<!--
+		<div id="idCommentsBox" style="display:none;">
+			<br/>
+			<div id="idCommentsBoxMessage"></div>
+			<div style="float:left;width:800px;"><textarea id="elm1" name="elm1" rows="15" style="width:800px;height:200px;" class="tinymce"></textarea></div>
+			<br/>
+		</div>	
+		-->
+		<div class="FooterPanel FooterPanelL" id="idFooterProgress"><span id="idMiscDisplay"></span><img alt="Processing..." style="visibility:hidden;" id="idSubmitProgress" src="images/wait.gif">
+		</div>
+		<div class="FooterPanel FooterPanelL" id="idFooterIndicators"> 
+			<div id="idCurrentPosContainer"><span id="idFooterDisplay">© 2014 Edaptive Technologies LLC </span></div>		
+		</div>
+		<div id="idTermsOfUse" class="FooterPanel">&nbsp;<a target="_blank" href="TermsOfUse.aspx">Terms of Use</a>&nbsp;</div>
+		<div class="FooterPanel FooterPanelR" id="idFooterPoweredBy">Powered By: <span style="color:orange;">E</span>daptive Platform</div>
+		<div id="idBannerActionBarx" class="FooterPanel FooterPanelR">&nbsp;<a id="idFeedbackDisplayDialog" href="javascript::void(0);">Support/Feedback</a> | <a id="idLogout" href="Login.aspx?logout=Y">Logout&nbsp;</a></div>
+		<!--<div class="FooterPanel FooterPanelR" id="idFeedbackContainerx"> 				
+		</div>-->
+	</div>
+	<div style="display:none"><span id="idDocBase">CLSI M100 ED33:2023</span><span id="idDoc">CLSI M100 ED33:2023 TABLE 1A</span><span id="idFormat">HTML</span><span id="idDocMode">SBYS</span><span id="idDocMDCList"></span></div>
+	<iframe id="idDocItemActionsDropDownFrame" src="about:blank"></iframe>
+	<div id="idDocItemActionsDropDown" class="cActionsDropDown">
+		<div style="position:relative;" class="cDropMenuHeader">Actions for <span id="idDocItemActionsDropDownGCIT"></span><img style="cursor:pointer; position:absolute; top:0px; right:0px;" id="idActionsClose" src="images/DialogClose.png"></div><hr class="cDropMenuItem">
+		<!--<div id="idDocItemActionsDropDownInnerContainer">-->
+		<!-- <div class="cDropMenuHeader">Actions for <span id="idDocItemActionsDropDownGCIT"></span></div>  -->
+		<!--	<div class="cDropMenuItem"><img class="cDropMenuItemImage" src="images/Tools2.jpg"> Select this item</div>
+		<div class="cDropMenuItem"><img class="cDropMenuItemImage" src="images/Annotation2.jpg"> Add Comments</div>
+		<div class="cDropMenuItem"><img class="cDropMenuItemImage" src="images/Bookmark2.jpg"> Bookmark</div>
+		<div class="cDropMenuItem"><img class="cDropMenuItemImage" src="images/Print2.jpg"> Display printer friendly</div>
+		<div class="cDropMenuItem" id="idDisplayItemViewPDF"><img class="cDropMenuItemImage" src="images/pdf_small.gif"> View PDF</div>
+		<div class="cDropMenuItem"><hr></div>-->
+		<!-- <div class="cDropMenuItem" id="idDisplayItemChanges"><img class="cDropMenuItemImage" src="images/Change2.jpg"> Compare with prior version</div>-->
+		<!--
+		<div class="cDropMenuItem" id="idDisplayItemCustomComparisonSetOldVersion"><img class="cDropMenuItemImage" src="images/pdf_small.gif"> Custom Comparison: Set old version</div>
+		<div class="cDropMenuItem" id="idDisplayItemCustomComparisonSetNewVersion"><img class="cDropMenuItemImage" src="images/pdf_small.gif"> Custom Comparison: Set new version</div>	
+		<div class="cDropMenuItem" id="idDisplayItemCustomComparisonShow"><img class="cDropMenuItemImage" src="images/pdf_small.gif"> Custom Comparison: Show</div>	
+		-->
+		<div class="cDropMenuItem"><hr></div>
+		<div class="cDropMenuItemLastEntry"></div>
+		<!--</div>-->
+	</div>
+	
+	<div id="idEditingElementProperties" style="display:none;">
+		<b>Properties:</b><br><br>
+		Element Type: <select name="idEditingPanelClasses" id="idEditingPanelClasses">
+			<option selected="" value="">Select Element Type</option>
+			<option value="cEditingSectionL1">Section</option>
+			<option value="cEditingSectionL2">Sub-section</option>
+		</select><br><br>
+		<a id="idEditingElementPropertiesSubmit" href="javascript::void(0);" style="color:rgb(128,255,255);">Submit</a> | <a id="idEditingElementPropertiesCancel" href="javascript::void(0);" style="color:rgb(128,255,255);">Cancel</a>
+	</div>
+	<div id="idCommentingNotify" style="display:none;">
+		<p>Alert! New comments were added to this document.</p>
+		<p style="text-align:center;"><a href="javascript:location.reload();">Refresh Document</a> | <a id="idCommentingNotifyCancel" href="javascript::void(0);">Cancel</a></p>
+	</div>
+	<div id="idEditingInsertTemplate" style="display:none;">
+		<b>Insert Template:</b><br><br>
+		Template: <select name="idEditingPanelTemplate" id="idEditingPanelTemplate">
+			<option selected="" value="">Select Template</option>
+			<option value="cEditingTemplateCopyright">Copyright</option>
+			<option value="cEditingTemplateOthers">Other Templates...</option>
+		</select><br><br>
+		<a id="idEditingInsertTemplateSubmit" href="javascript::void(0);" style="color:rgb(128,255,255);">Submit</a> | <a id="idEditingInsertTemplateCancel" href="javascript::void(0);" style="color:rgb(128,255,255);">Cancel</a>
+	</div>
+	<span style="display:none;" id="idSelectorType">NO</span>
+		
+	
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19247348-14', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<span style="display:none;" id="idDisplayExtraPanel">Y</span>
+
+
+
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body></html>
